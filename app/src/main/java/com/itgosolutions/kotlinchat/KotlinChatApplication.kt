@@ -15,8 +15,6 @@ class KotlinChatApplication: Application() {
         }
     }
 
-
-
     override fun onCreate() {
         super.onCreate()
 

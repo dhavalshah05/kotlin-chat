@@ -13,8 +13,4 @@ class ActivityModule(private val _activity: FragmentActivity) {
         return _activity;
     }
 
-    @Provides
-    fun provideString(): String {
-        return "Hello Dhaval Shah"
-    }
 }

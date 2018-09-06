@@ -1,3 +1,13 @@
 <resources>
     <string name="app_name">KotlinChat</string>
+    <string name="login_text_view">Login</string>
+    <string name="already_user_text_view">Already a user?</string>
+    <string name="register_button">Register</string>
+    <string name="password_text_view">Password</string>
+    <string name="email_text_view">Email</string>
+    <string name="username_text_view">Username</string>
+    <string name="avatar_image_description">Avatar Image</string>
+    <string name="register_text_view">Register</string>
+    <string name="new_user_text_view">New User?</string>
+    <string name="login_button">Login</string>
 </resources>

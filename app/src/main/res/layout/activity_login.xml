@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/blue_grey_900"
-    tools:context=".ui.register.RegisterActivity">
+    tools:context=".ui.login.LoginActivity">
 
     <LinearLayout
         android:layout_width="0dp"
@@ -25,26 +25,6 @@
             android:contentDescription="@string/avatar_image_description"
             android:src="@drawable/logo_small_round"
             android:tint="@color/green_300" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:text="@string/username_text_view"
-            android:theme="@style/EditTextLabel" />
-
-        <android.support.design.widget.TextInputEditText
-            android:id="@+id/usernameEditText"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="-4dp"
-            android:layout_marginRight="-4dp"
-            android:inputType="text"
-            android:maxLength="50"
-            android:maxLines="1"
-            android:singleLine="true"
-            android:textColor="@color/blue_grey_300"
-            android:theme="@style/EditText.Grey" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -87,13 +67,13 @@
             android:theme="@style/EditText.Grey" />
 
         <Button
-            android:id="@+id/registerButton"
+            android:id="@+id/loginButton"
             android:layout_width="201dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="20dp"
             android:background="@drawable/btn_rounded_green_300"
-            android:text="@string/register_button"
+            android:text="@string/login_button"
             android:textAllCaps="false"
             android:textColor="@color/blue_grey_900" />
 
@@ -106,18 +86,18 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/already_user_text_view"
+                android:text="@string/new_user_text_view"
                 android:textAppearance="@style/Base.TextAppearance.AppCompat.Subhead"
                 android:textColor="@color/blue_grey_300" />
 
             <TextView
-                android:id="@+id/loginTextView"
+                android:id="@+id/registerTextView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
                 android:clickable="true"
                 android:focusable="true"
-                android:text="@string/login_text_view"
+                android:text="@string/register_text_view"
                 android:textAppearance="@style/Base.TextAppearance.AppCompat.Subhead"
                 android:textColor="@color/green_300"
                 android:textStyle="bold" />
