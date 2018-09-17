@@ -1,6 +1,7 @@
 package com.itgosolutions.kotlinchat.di.application
 
 import android.app.Application
+import com.itgosolutions.kotlinchat.manager.UserManager
 import dagger.Module
 import dagger.Provides
 import javax.inject.Singleton
@@ -14,4 +15,9 @@ class ApplicationModule(private val _application: Application) {
         return _application;
     }
 
+    @Singleton
+    @Provides
+    fun providesUserManager(): UserManager {
+        return UserManager()
+    }
 }

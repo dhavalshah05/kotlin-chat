@@ -20,4 +20,16 @@ abstract class BaseActivity : AppCompatActivity() {
         return _activityComponent
     }
 
+    override fun onStart() {
+        super.onStart()
+        initView()
+    }
+
+    override fun onStop() {
+        super.onStop()
+        destroyView()
+    }
+
+    abstract fun initView()
+    abstract fun destroyView()
 }
