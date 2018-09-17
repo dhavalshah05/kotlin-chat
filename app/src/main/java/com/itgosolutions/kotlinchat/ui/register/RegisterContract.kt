@@ -14,8 +14,8 @@ interface RegisterContract {
         fun showUsernameError(errorMessage: String)
         fun showEmailError(errorMessage: String)
         fun showPasswordError(errorMessage: String)
-        fun onRegisterSuccess()
-        fun onRegisterFailure(errorMessage: String)
+        fun startHomeScreen()
+        fun showRegistrationError(errorMessage: String)
     }
 
     interface Presenter {

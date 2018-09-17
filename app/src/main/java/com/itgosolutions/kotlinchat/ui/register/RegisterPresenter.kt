@@ -146,11 +146,11 @@ class RegisterPresenter(private val _auth: FirebaseAuth,
 
     private fun showSuccess() {
         stopLoading()
-        _view?.onRegisterSuccess()
+        _view?.startHomeScreen()
     }
 
     private fun showFailure(errorMessage: String) {
         stopLoading()
-        _view?.onRegisterFailure(errorMessage)
+        _view?.showRegistrationError(errorMessage)
     }
 }

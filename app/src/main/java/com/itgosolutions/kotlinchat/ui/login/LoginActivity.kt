@@ -76,12 +76,12 @@ class LoginActivity : BaseActivity(), LoginContract.View {
         showShortToast(errorMessage)
     }
 
-    override fun onLoginSuccess() {
+    override fun startHomeScreen() {
         HomeActivity.start(this)
         finish()
     }
 
-    override fun onLoginFailure(errorMessage: String) {
+    override fun showLoginError(errorMessage: String) {
         showShortToast(errorMessage)
     }
 

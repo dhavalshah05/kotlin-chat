@@ -11,8 +11,8 @@ interface LoginContract {
         fun disableRegisterInfoContainer()
         fun showEmailError(errorMessage: String)
         fun showPasswordError(errorMessage: String)
-        fun onLoginSuccess()
-        fun onLoginFailure(errorMessage: String)
+        fun startHomeScreen()
+        fun showLoginError(errorMessage: String)
     }
 
     interface Presenter {

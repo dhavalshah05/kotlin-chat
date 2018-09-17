@@ -116,12 +116,12 @@ class RegisterActivity : BaseActivity(), RegisterContract.View {
         showShortToast(errorMessage)
     }
 
-    override fun onRegisterSuccess() {
-        showShortToast("Registration Success")
-        startHomeScreen()
+    override fun startHomeScreen() {
+        HomeActivity.start(this)
+        finish()
     }
 
-    override fun onRegisterFailure(errorMessage: String) {
+    override fun showRegistrationError(errorMessage: String) {
         showShortToast(errorMessage)
     }
 
@@ -155,11 +155,6 @@ class RegisterActivity : BaseActivity(), RegisterContract.View {
         val password = passwordEditText.text.toString()
 
         presenter.registerUser(username, email, password, pickedImageFile)
-    }
-
-    private fun startHomeScreen() {
-        HomeActivity.start(this)
-        finish()
     }
 
     private fun shouldShowGalleryRational(): Boolean {

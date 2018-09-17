@@ -78,11 +78,11 @@ class LoginPresenter(private val _auth: FirebaseAuth,
 
     private fun showSuccess() {
         stopLoading()
-        _view?.onLoginSuccess()
+        _view?.startHomeScreen()
     }
 
     private fun showFailure(errorMessage: String) {
         stopLoading()
-        _view?.onLoginFailure(errorMessage)
+        _view?.showLoginError(errorMessage)
     }
 }
