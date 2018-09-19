@@ -12,4 +12,8 @@
     <string name="login_button">Login</string>
     <string name="logout_button">Logout</string>
     <string name="logout_menu">Logout</string>
+    <string name="select_user_menu">Select User</string>
+    <string name="no_user_found_text_view">No user found. Please suggest your friends to use Kotlin Chat</string>
+    <string name="send_button">Send</string>
+    <string name="enter_new_message_edit_text">Enter new Message</string>
 </resources>

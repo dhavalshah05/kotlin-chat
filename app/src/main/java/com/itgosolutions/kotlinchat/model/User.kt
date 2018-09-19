@@ -1,17 +1,11 @@
 package com.itgosolutions.kotlinchat.model
 
-class User() {
+import android.os.Parcelable
+import kotlinx.android.parcel.Parcelize
 
-    lateinit var uid: String
-    lateinit var username: String
-    lateinit var email: String
-    var profileUrl: String = ""
+@Parcelize
+class User(val uid: String, val username: String, val email: String, val profileUrl: String = "") : Parcelable {
 
-    constructor(uid: String, username: String, email: String, profileUrl: String = "") : this() {
-        this.uid = uid
-        this.username = username
-        this.email = email
-        this.profileUrl = profileUrl
-    }
+    constructor() : this("", "", "")
 
 }

@@ -6,12 +6,16 @@ import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.storage.FirebaseStorage
 import com.itgosolutions.kotlinchat.manager.UserManager
+import com.itgosolutions.kotlinchat.ui.chatLog.ChatLogContract
+import com.itgosolutions.kotlinchat.ui.chatLog.ChatLogPresenter
 import com.itgosolutions.kotlinchat.ui.home.HomeContract
 import com.itgosolutions.kotlinchat.ui.home.HomePresenter
 import com.itgosolutions.kotlinchat.ui.login.LoginContract
 import com.itgosolutions.kotlinchat.ui.login.LoginPresenter
 import com.itgosolutions.kotlinchat.ui.register.RegisterContract
 import com.itgosolutions.kotlinchat.ui.register.RegisterPresenter
+import com.itgosolutions.kotlinchat.ui.selectUser.SelectUserContract
+import com.itgosolutions.kotlinchat.ui.selectUser.SelectUserPresenter
 import dagger.Module
 import dagger.Provides
 
@@ -54,5 +58,15 @@ class ActivityModule(private val _activity: FragmentActivity) {
     @Provides
     fun providesLoginPresenter(auth: FirebaseAuth, database: FirebaseDatabase, userManager: UserManager): LoginContract.Presenter {
         return LoginPresenter(auth, database, userManager)
+    }
+
+    @Provides
+    fun providesSelectUserPresenter(database: FirebaseDatabase, userManager: UserManager): SelectUserContract.Presenter {
+        return SelectUserPresenter(database, userManager)
+    }
+
+    @Provides
+    fun providesChatLogPresenter(database: FirebaseDatabase, userManager: UserManager): ChatLogContract.Presenter {
+        return ChatLogPresenter(database, userManager)
     }
 }
